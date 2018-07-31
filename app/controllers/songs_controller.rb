@@ -61,7 +61,7 @@ class SongsController < ApplicationController
       @genre = Genre.find_by(name: genre_name) || Genre.create(name: genre_name)
       @song.genres << @genre
     end
-    binding.pry
+    
     @song.save
 
     flash[:notice] = "Successfully updated song."
